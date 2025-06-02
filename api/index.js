@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     const data = req.body;
 
@@ -28,5 +28,4 @@ export default async function handler(req, res) {
     console.error('Ошибка обработки:', error);
     return res.status(500).json({ error: 'Ошибка обработки данных' });
   }
-}
-moved index.js into /api folder
+};
